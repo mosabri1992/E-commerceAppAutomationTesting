@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Surefire suite" duration-ms="71998" started-at="2022-09-14T19:28:52 EET" finished-at="2022-09-14T19:30:04 EET">
+  <suite name="Surefire suite" duration-ms="65867" started-at="2022-09-14T23:40:49 EET" finished-at="2022-09-14T23:41:55 EET">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test name="Surefire test" duration-ms="71998" started-at="2022-09-14T19:28:52 EET" finished-at="2022-09-14T19:30:04 EET">
+    <test name="Surefire test" duration-ms="65867" started-at="2022-09-14T23:40:49 EET" finished-at="2022-09-14T23:41:55 EET">
       <class name="org.example.testRunner.runners">
-        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="setUpClass" is-config="true" duration-ms="387" started-at="2022-09-14T19:28:52 EET" finished-at="2022-09-14T19:28:52 EET">
+        <test-method status="PASS" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="setUpClass" is-config="true" duration-ms="601" started-at="2022-09-14T23:40:49 EET" finished-at="2022-09-14T23:40:49 EET">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@41eb94bc]]>
+                <![CDATA[org.testng.TestRunner@6fa0450e]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method status="FAIL" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="40160" started-at="2022-09-14T19:28:52 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T19:29:32 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="30811" started-at="2022-09-14T23:40:49 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T23:41:20 EET">
           <params>
             <param index="0">
               <value>
@@ -34,53 +34,10 @@
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":".result"}
-  (Session info: MicrosoftEdge=105.0.1343.33)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'MOMO', ip: '192.168.1.4', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [0f572738256a88933c49f883317b1344, findElement {using=class name, value=result}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 105.0.1343.33, ms:edgeOptions: {debuggerAddress: localhost:51926}, msedge: {msedgedriverVersion: 105.0.1343.33 (4122bb4646b3..., userDataDir: C:\Users\engmo\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51926/devtoo..., se:cdpVersion: 105.0.1343.33, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0f572738256a88933c49f883317b1344]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".result"}
-  (Session info: MicrosoftEdge=105.0.1343.33)
-For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
-Build info: version: '4.4.0', revision: 'e5c75ed026a'
-System info: host: 'MOMO', ip: '192.168.1.4', os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_341'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [0f572738256a88933c49f883317b1344, findElement {using=class name, value=result}]
-Capabilities {acceptInsecureCerts: false, browserName: msedge, browserVersion: 105.0.1343.33, ms:edgeOptions: {debuggerAddress: localhost:51926}, msedge: {msedgedriverVersion: 105.0.1343.33 (4122bb4646b3..., userDataDir: C:\Users\engmo\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: WINDOWS, proxy: Proxy(), se:cdp: ws://localhost:51926/devtoo..., se:cdpVersion: 105.0.1343.33, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 0f572738256a88933c49f883317b1344
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:167)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:142)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:547)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:365)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:357)
-at org.example.pages.P01_register.result(P01_register.java:76)
-at org.example.stepDefs.D01_registerStepDef.success(D01_registerStepDef.java:55)
-at ✽.success message is displayed(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F01_Register.feature:12)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="16077" started-at="2022-09-14T19:29:32 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T19:29:48 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="13191" started-at="2022-09-14T23:41:20 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T23:41:33 EET">
           <params>
             <param index="0">
               <value>
@@ -96,7 +53,7 @@ at ✽.success message is displayed(file:///C:/Users/engmo/IdeaProjects/E-commer
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="15241" started-at="2022-09-14T19:29:48 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T19:30:03 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="11068" started-at="2022-09-14T23:41:33 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T23:41:44 EET">
           <params>
             <param index="0">
               <value>
@@ -112,7 +69,23 @@ at ✽.success message is displayed(file:///C:/Users/engmo/IdeaProjects/E-commer
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="tearDownClass" is-config="true" duration-ms="103" started-at="2022-09-14T19:30:03 EET" finished-at="2022-09-14T19:30:04 EET">
+        <test-method status="PASS" signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="runScenario" duration-ms="10021" started-at="2022-09-14T23:41:44 EET" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2022-09-14T23:41:54 EET">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user could switch currency to euro"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["F02_Login | users could change currency to euro"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:org.example.testRunner.runners@32d2fa64]" name="tearDownClass" is-config="true" duration-ms="143" started-at="2022-09-14T23:41:54 EET" finished-at="2022-09-14T23:41:55 EET">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->

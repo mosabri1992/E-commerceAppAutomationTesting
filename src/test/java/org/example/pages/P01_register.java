@@ -80,7 +80,7 @@ public class P01_register {
         soft.assertEquals(actualResult,expectedResult);
         String expectedColor=Hooks.driver.findElement(By.className("result")).getCssValue("color");
         String actualColor= Color.fromString(expectedColor).asHex();
-        soft.assertEquals(actualColor,expectedColor);
+        soft.assertEquals(actualColor,"#4cb17c");
         soft.assertAll();
     }
 
