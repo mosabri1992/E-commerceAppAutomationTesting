@@ -4,8 +4,12 @@ import io.cucumber.messages.types.Hook;
 import org.example.stepDefs.Hooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
+import java.util.List;
 
 public class P03_homePage {
 
@@ -80,7 +84,39 @@ public class P03_homePage {
         Assert.assertEquals("SKU: ".concat(sku),actualSku);
 
     }
+////////////////////////////////////////////////////////////////////////////////////////
 
+    //Hover Feature
+    public void hoverOverCategories() throws InterruptedException {
+        Actions action=new Actions(Hooks.driver);
+        List<WebElement> categories=Hooks.driver.findElements(By.xpath("//ul[@class=\"top-menu notmobile\"]/li"));
+        int categoriesCounter= categories.size();
+        int min=0;
+        int max=categoriesCounter-1;
+
+        int selectedCategory=(int)Math.floor(Math.random()*(max-min+1)+min);
+        String selectedCategoryName=categories.get(selectedCategory).getText();
+        System.out.println(selectedCategoryName);
+        action.moveToElement(categories.get(selectedCategory)).perform();
+        Thread.sleep(2000);
+        List<WebElement>subCategories=Hooks.driver.findElements(By.xpath("(//ul[@class='top-menu notmobile']//ul)[" +Integer.toString(selectedCategory+1)+"]/li"));
+
+        if(subCategories.isEmpty()){
+            categories.get(selectedCategory).click();
+            Assert.assertTrue(Hooks.driver.getCurrentUrl().replaceAll("-"," ").contains(selectedCategoryName.toLowerCase().trim()));
+        }
+        else {
+            int subCategoriesCounter=subCategories.size();
+            int minSub=0;
+            int maxSub=subCategoriesCounter-1;
+            int selectedSubCategory = (int) Math.floor(Math.random() * (maxSub - minSub + 1) + minSub);
+            String selectedSubCategoryName=subCategories.get(selectedSubCategory).getText();
+            subCategories.get(selectedSubCategory).click();
+            Assert.assertTrue(Hooks.driver.getCurrentUrl().contains(selectedSubCategoryName.toLowerCase().trim()));
+        }
+
+
+    }
 
 
 
