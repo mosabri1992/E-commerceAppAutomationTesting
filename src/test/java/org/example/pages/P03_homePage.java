@@ -9,7 +9,9 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
+import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class P03_homePage {
 
@@ -116,6 +118,92 @@ public class P03_homePage {
         }
 
 
+    }
+
+    /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Slider
+
+    public WebElement firstSlider() throws InterruptedException {
+        WebElement firstSlider= Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[1]/div[2]/a[1]"));
+
+        return  firstSlider;
+    }
+public WebElement selectFirstProduct(){
+        WebElement selectFirstProduct=Hooks.driver.findElement(By.xpath("//*[@id=\"nivo-slider\"]/a[1]"));
+        return selectFirstProduct;
+}
+public void firstProductUrl(){
+        Hooks.driver.manage().timeouts().implicitlyWait(5 , TimeUnit.SECONDS);
+        String actualFirstUrl=Hooks.driver.getCurrentUrl();
+        String expectedFirstUrl="https://demo.nopcommerce.com/nokia-lumia-1020";
+        Assert.assertEquals(actualFirstUrl,expectedFirstUrl);
+}
+    public WebElement secondSlider() throws InterruptedException {
+        WebElement secondSlider= Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[1]/div[2]/a[2]"));
+
+        return  secondSlider;
+    }
+    public WebElement selectSecondProduct(){
+        WebElement selectSecondProduct=Hooks.driver.findElement(By.xpath("//*[@id=\"nivo-slider\"]/a[2]"));
+        return selectSecondProduct;
+    }
+    public void secondProductUrl(){
+        Hooks.driver.manage().timeouts().implicitlyWait(5 , TimeUnit.SECONDS);
+        String actualSecondUrl=Hooks.driver.getCurrentUrl();
+        String expectedSecondUrl="https://demo.nopcommerce.com/iphone-6";
+        Assert.assertEquals(actualSecondUrl,expectedSecondUrl);
+    }
+
+
+    //////////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Social media icons
+
+    public WebElement facebookIcon(){
+        WebElement facebookIcon=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[1]/a"));
+        return facebookIcon;
+    }
+
+    public void facebookNewTab() throws InterruptedException {
+        Thread.sleep(2000);
+        ArrayList<String> newTab=new ArrayList<>(Hooks.driver.getWindowHandles());
+        Hooks.driver.switchTo().window(newTab.get(1));
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://web.facebook.com/nopCommerce?_rdc=1&_rdr");
+    }
+
+    public WebElement twitterIcon(){
+        WebElement twitterIcon=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[2]/a"));
+        return twitterIcon;
+    }
+
+    public void twitterNewTab() throws InterruptedException {
+        Thread.sleep(2000);
+        ArrayList<String> newTab=new ArrayList<>(Hooks.driver.getWindowHandles());
+        Hooks.driver.switchTo().window(newTab.get(1));
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://twitter.com/nopCommerce");
+    }
+
+    public WebElement rssIcon(){
+        WebElement rssIcon=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[3]/a"));
+        return rssIcon;
+    }
+
+    public void rssNewTab() throws InterruptedException {
+        Thread.sleep(2000);
+        ArrayList<String> newTab=new ArrayList<>(Hooks.driver.getWindowHandles());
+        Hooks.driver.switchTo().window(newTab.get(1));
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://demo.nopcommerce.com/new-online-store-is-open");
+    }
+
+    public WebElement youtubeIcon(){
+        WebElement youtubeIcon=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[4]/div[1]/div[4]/div[1]/ul/li[4]/a"));
+        return youtubeIcon;
+    }
+
+    public void youtubeNewTab() throws InterruptedException {
+        Thread.sleep(2000);
+        ArrayList<String> newTab=new ArrayList<>(Hooks.driver.getWindowHandles());
+        Hooks.driver.switchTo().window(newTab.get(1));
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://www.youtube.com/user/nopCommerce");
     }
 
 
