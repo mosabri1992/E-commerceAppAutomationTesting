@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="19" time="213.713">
+<testcase classname="Register | register new account" name="user register with valid data" time="28.219">
+<system-out><![CDATA[Given user go to register page..............................................passed
+When user select gender.....................................................passed
+And user enter first name "automation" and last name "tester"...............passed
+And user enter date of birth................................................passed
+And user enter email "mohamed@example.com" field............................passed
+And user fills Password fields "P@ssw0rd" "P@ssw0rd"........................passed
+And user clicks on register button..........................................passed
+Then success message is displayed...........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login | users could use login functionality to use their accounts" name="user could login with valid email and password" time="11.393">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "valid" "mohamed@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user login to the system successfully..................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login | users could use login functionality to use their accounts" name="user could login with invalid email and password" time="15.074">
+<system-out><![CDATA[Given user go to login page.................................................passed
+When user login with "invalid" "wrong@example.com" and "P@ssw0rd"...........passed
+And user press on login button..............................................passed
+Then user could not login to the system.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Currency | users could change currency to euro" name="user could switch currency to euro" time="8.752">
+<system-out><![CDATA[When user select euro currency..............................................passed
+Then user can find euro symbol shown on the products in Home page...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product name" time="7.215">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with name "book"............................................passed
+Then search result appears relevant to the search keyword...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product name 2" time="7.143">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with name "laptop"..........................................passed
+Then search result appears relevant to the search keyword...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product name 3" time="8.508">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with name "nike"............................................passed
+Then search result appears relevant to the search keyword...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product sku" time="11.484">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with sku "SCI_FAITH"........................................passed
+Then search result appears with "SCI_FAITH".................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product sku 2" time="11.257">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with sku "APPLE_CAM"........................................passed
+Then search result appears with "APPLE_CAM".................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Search | User could search for any product using search box" name="user could search using product sku 3" time="11.407">
+<system-out><![CDATA[When user clicks on search box..............................................passed
+And user search with sku "SF_PRO_11"........................................passed
+Then search result appears with "SF_PRO_11".................................passed
+]]></system-out>
+</testcase>
+<testcase classname="HoverCategories | user could select any category" name="user could select any category" time="19.771">
+<system-out><![CDATA[When user select subcategory after hovering over categories.................passed
+]]></system-out>
+</testcase>
+<testcase classname="Slider | user could select product from slider" name="First slider is clickable on home page" time="6.366">
+<failure message="expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on first slider............................................passed
+And user clicks on first slider product.....................................passed
+Then user redirected to first product page..................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.firstProductUrl(P03_homePage.java:141)
+	at org.example.stepDefs.D06_homeSlidersStepDef.firstProductUrl(D06_homeSlidersStepDef.java:21)
+	at ✽.user redirected to first product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:6)
+]]></failure>
+</testcase>
+<testcase classname="Slider | user could select product from slider" name="Second slider is clickable on home page" time="6.423">
+<failure message="expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]" type="java.lang.AssertionError"><![CDATA[When user clicks on second slider...........................................passed
+And user clicks on second slider product....................................passed
+Then user redirected to second product page.................................failed
+
+StackTrace:
+java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.secondProductUrl(P03_homePage.java:156)
+	at org.example.stepDefs.D06_homeSlidersStepDef.secondProductUrl(D06_homeSlidersStepDef.java:34)
+	at ✽.user redirected to second product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:11)
+]]></failure>
+</testcase>
+<testcase classname="FollowUsFeature | when user click on social media icon is redirected to social media link" name="user clicks facebook icon" time="8.286">
+<system-out><![CDATA[When user clicks facebook icon..............................................passed
+Then facebook link is opened in new tab.....................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FollowUsFeature | when user click on social media icon is redirected to social media link" name="user clicks twitter icon" time="7.912">
+<system-out><![CDATA[When user clicks twitter icon...............................................passed
+Then twitter link is opened in new tab......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="FollowUsFeature | when user click on social media icon is redirected to social media link" name="user clicks rss icon" time="9.807">
+<failure message="Index: 1, Size: 1" type="java.lang.IndexOutOfBoundsException"><![CDATA[When user clicks rss icon...................................................passed
+Then rss link is opened in new tab..........................................failed
+
+StackTrace:
+java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.pages.P03_homePage.rssNewTab(P03_homePage.java:195)
+	at org.example.stepDefs.D07_followUsStepDef.rssNewtab(D07_followUsStepDef.java:34)
+	at ✽.rss link is opened in new tab(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F07_followUs.feature:13)
+]]></failure>
+</testcase>
+<testcase classname="FollowUsFeature | when user click on social media icon is redirected to social media link" name="user clicks youtube icon" time="11.385">
+<system-out><![CDATA[When user clicks youtube icon...............................................passed
+Then youtube link is opened in new tab......................................passed
+]]></system-out>
+</testcase>
+<testcase classname="WishList Feature | user can click on ❤ button to add product to wish list" name="after adding items to wishlist you get a success message" time="10.885">
+<system-out><![CDATA[When user add product to wishlist...........................................passed
+Then adding item to wishlist success message is displayed...................passed
+]]></system-out>
+</testcase>
+<testcase classname="WishList Feature | user can click on ❤ button to add product to wish list" name="the item you added appears in wishlist page" time="12.13">
+<system-out><![CDATA[When user add another product to wishlist...................................passed
+And adding item to wishlist success message is displayed....................passed
+And user go to wishlist page................................................passed
+Then user find added items in the wishlist page and Qty value is bigger than 0.passed
+]]></system-out>
+</testcase>
+</testsuite>

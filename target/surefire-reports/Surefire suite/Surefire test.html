@@ -1,0 +1,225 @@
+<html>
+<head>
+<title>TestNG:  Surefire test</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>Surefire test</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>16/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Sep 19 22:55:33 EET 2022</td>
+</tr>
+<tr><td>Total time:</td><td>214 seconds (214188 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "First slider is clickable on home page", "Slider | user could select product from slider"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.example.pages.P03_homePage.firstProductUrl(P03_homePage.java:141)
+	at org.example.stepDefs.D06_homeSlidersStepDef.firstProductUrl(D06_homeSlidersStepDef.java:21)
+	at ?.user redirected to first product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:6)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1497444850", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1497444850'><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/nokia-lumia-1020] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.firstProductUrl(P03_homePage.java:141)
+	at org.example.stepDefs.D06_homeSlidersStepDef.firstProductUrl(D06_homeSlidersStepDef.java:21)
+	at ?.user redirected to first product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:6)
+</pre></div></td>
+<td>6</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "Second slider is clickable on home page", "Slider | user could select product from slider"</td>
+<td><div><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.example.pages.P03_homePage.secondProductUrl(P03_homePage.java:156)
+	at org.example.stepDefs.D06_homeSlidersStepDef.secondProductUrl(D06_homeSlidersStepDef.java:34)
+	at ?.user redirected to second product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:11)
+... Removed 6 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace788877168", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace788877168'><pre>java.lang.AssertionError: expected [https://demo.nopcommerce.com/iphone-6] but found [https://demo.nopcommerce.com/]
+	at org.testng.Assert.fail(Assert.java:110)
+	at org.testng.Assert.failNotEquals(Assert.java:1413)
+	at org.testng.Assert.assertEqualsImpl(Assert.java:149)
+	at org.testng.Assert.assertEquals(Assert.java:131)
+	at org.testng.Assert.assertEquals(Assert.java:655)
+	at org.testng.Assert.assertEquals(Assert.java:665)
+	at org.example.pages.P03_homePage.secondProductUrl(P03_homePage.java:156)
+	at org.example.stepDefs.D06_homeSlidersStepDef.secondProductUrl(D06_homeSlidersStepDef.java:34)
+	at ?.user redirected to second product page(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F06_homeSliders.feature:11)
+</pre></div></td>
+<td>6</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks rss icon", "FollowUsFeature | when user click on social media icon is redirected to social media link"</td>
+<td><div><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.pages.P03_homePage.rssNewTab(P03_homePage.java:195)
+	at org.example.stepDefs.D07_followUsStepDef.rssNewtab(D07_followUsStepDef.java:34)
+	at ?.rss link is opened in new tab(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F07_followUs.feature:13)
+</pre></div><a href='#' onClick='toggleBox("stack-trace1916681239", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1916681239'><pre>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:659)
+	at java.util.ArrayList.get(ArrayList.java:435)
+	at org.example.pages.P03_homePage.rssNewTab(P03_homePage.java:195)
+	at org.example.stepDefs.D07_followUsStepDef.rssNewtab(D07_followUsStepDef.java:34)
+	at ?.rss link is opened in new tab(file:///C:/Users/engmo/IdeaProjects/E-commerceAppAutomationTesting/src/main/resources/features/F07_followUs.feature:13)
+</pre></div></td>
+<td>9</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with invalid email and password", "Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>15</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks twitter icon", "FollowUsFeature | when user click on social media icon is redirected to social media link"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks facebook icon", "FollowUsFeature | when user click on social media icon is redirected to social media link"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could select any category", "HoverCategories | user could select any category"</td>
+<td></td>
+<td>19</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "after adding items to wishlist you get a success message", "WishList Feature | user can click on ? button to add product to wish list"</td>
+<td></td>
+<td>10</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could login with valid email and password", "Login | users could use login functionality to use their accounts"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product name", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>7</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could search using product sku", "Search | User could search for any product using search box"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user could switch currency to euro", "Currency | users could change currency to euro"</td>
+<td></td>
+<td>8</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user register with valid data", "Register | register new account"</td>
+<td></td>
+<td>28</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "the item you added appears in wishlist page", "WishList Feature | user can click on ? button to add product to wish list"</td>
+<td></td>
+<td>12</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+<tr>
+<td title='org.example.testRunner.runners.runScenario()'><b>runScenario</b><br>Test class: org.example.testRunner.runners<br>Test method: Runs Cucumber Scenarios<br>Parameters: "user clicks youtube icon", "FollowUsFeature | when user click on social media icon is redirected to social media link"</td>
+<td></td>
+<td>11</td>
+<td>org.example.testRunner.runners@32d2fa64</td></tr>
+</table><p>
+</body>
+</html>

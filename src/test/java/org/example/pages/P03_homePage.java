@@ -5,9 +5,11 @@ import org.example.stepDefs.Hooks;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.Color;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+import org.testng.asserts.SoftAssert;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -167,7 +169,7 @@ public void firstProductUrl(){
         Thread.sleep(2000);
         ArrayList<String> newTab=new ArrayList<>(Hooks.driver.getWindowHandles());
         Hooks.driver.switchTo().window(newTab.get(1));
-        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://web.facebook.com/nopCommerce?_rdc=1&_rdr");
+        Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://www.facebook.com/nopCommerce");
     }
 
     public WebElement twitterIcon(){
@@ -206,6 +208,33 @@ public void firstProductUrl(){
         Assert.assertEquals(Hooks.driver.getCurrentUrl(),"https://www.youtube.com/user/nopCommerce");
     }
 
+    //////////////////////////////////////////////////////////////////////////////////////////////////////
+    //Wishlist
 
+    public WebElement addingProductToWishlist() throws InterruptedException {
+        WebElement addHtcToWishlist=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div/div[4]/div[2]/div[3]/div/div[2]/div[3]/div[2]/button[3]"));
+        return addHtcToWishlist;
+    }
 
+    public void checkSuccess(){
+        WebElement successMsg=Hooks.driver.findElement(By.xpath("//div[@class=\"bar-notification success\"]"));
+        String actualMsgColor= Color.fromString(successMsg.getCssValue("background-color")).asHex();
+
+        SoftAssert soft= new SoftAssert();
+        soft.assertTrue(successMsg.isDisplayed(),"not displayed");
+        soft.assertEquals(actualMsgColor,"#4bb07a");
+
+    }
+
+    public WebElement wishList(){
+        WebElement wishList=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[1]/div[1]/div[2]/div[1]/ul/li[3]/a"));
+        return wishList;
+    }
+
+    public void wishListQty(){
+        WebElement wishListQty=Hooks.driver.findElement(By.xpath("/html/body/div[6]/div[3]/div/div/div/div[2]/div[1]/form/div[1]/table/tbody/tr/td[6]/input"));
+        Integer itemsQty=Integer.parseInt(wishListQty.getAttribute("value"));
+        Assert.assertTrue(itemsQty > 0);
+
+    }
 }
